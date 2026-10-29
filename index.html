@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPARKUP | College Events</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h2>SPARK<span>UP</span></h2>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#events">Events</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <p class="tag">YOUR CAMPUS. YOUR MOMENT.</p>
+    <h1>Make Your Next<br>
+      <span>Big Moment.</span>
+    </h1>
+    <p>Discover events, meet new people, and make memories at your college.</p>
+    <a class="button" href="#events">Explore Events ↗</a>
+  </section>
+
+  <section class="events" id="events">
+    <p class="tag">DON'T MISS OUT</p>
+    <h2>Upcoming <span>Events</span></h2>
+
+    <div class="event-grid" id="eventGrid">
+      <article class="event-card">
+        <div class="event-icon">⌘</div>
+        <p class="category">TECHNOLOGY</p>
+        <h3>Campus CodeFest</h3>
+        <p>Build creative projects and showcase your coding skills.</p>
+        <button onclick="registerEvent('Campus CodeFest')">
+          Register Now
+        </button>
+      </article>
+
+      <article class="event-card">
+        <div class="event-icon">♫</div>
+        <p class="category">MUSIC</p>
+        <h3>Neon Nights</h3>
+        <p>Enjoy live music, performances, and campus entertainment.</p>
+        <button onclick="registerEvent('Neon Nights')">
+          Register Now
+        </button>
+      </article>
+
+      <article class="event-card">
+        <div class="event-icon">✿</div>
+        <p class="category">ARTS</p>
+        <h3>Creative Canvas</h3>
+        <p>Explore your imagination through art and creativity.</p>
+        <button onclick="registerEvent('Creative Canvas')">
+          Register Now
+        </button>
+      </article>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <p class="tag">ABOUT SPARKUP</p>
+    <h2>One Campus. <span>Endless Possibilities.</span></h2>
+    <p>
+      SPARKUP brings college events together in one place.
+      Discover activities, participate in workshops, and connect
+      with your campus community.
+    </p>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Ready to <span>Join Us?</span></h2>
+    <p>Find your next campus experience with SPARKUP.</p>
+    <a href="#events" class="button">Find an Event ↗</a>
+  </section>
+
+  <footer>
+    <h3>SPARKUP<span>®</span></h3>
+    <p>Made for campus life ✦</p>
+    <p>© <span id="year"></span> UNIFEST</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

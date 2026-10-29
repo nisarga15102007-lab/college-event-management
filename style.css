@@ -1,0 +1,254 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background: #090711;
+  color: #f7f4ff;
+}
+
+:root {
+  --purple: #a855f7;
+  --pink: #f04fbd;
+  --cyan: #48e5f2;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 8%;
+  border-bottom: 1px solid #ffffff18;
+  background: #0e0b19;
+}
+
+header h2 {
+  letter-spacing: 2px;
+}
+
+header h2 span,
+footer span {
+  color: var(--pink);
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #c9c1d9;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--cyan);
+}
+
+.hero {
+  min-height: 480px;
+  padding: 100px 10%;
+  background:
+    radial-gradient(ellipse at 85% 40%, #a855f72b, transparent 45%),
+    radial-gradient(ellipse at 15% 80%, #f04fbd19, transparent 45%);
+}
+
+.tag {
+  color: var(--cyan);
+  letter-spacing: 3px;
+  font-size: 11px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 7vw, 76px);
+  line-height: 1.08;
+  margin-bottom: 22px;
+}
+
+.hero h1 span,
+section h2 span {
+  background: linear-gradient(90deg, var(--purple), var(--pink), var(--cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero > p:not(.tag) {
+  color: #aaa2bd;
+  line-height: 1.8;
+  max-width: 500px;
+  margin-bottom: 28px;
+}
+
+.button {
+  display: inline-block;
+  padding: 14px 22px;
+  border-radius: 10px;
+  text-decoration: none;
+  background: linear-gradient(100deg, var(--purple), var(--pink));
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  box-shadow: 0 0 25px #a855f733;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 35px #d34fe766;
+}
+
+.events {
+  padding: 75px 8%;
+}
+
+section h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  margin-bottom: 28px;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.event-card {
+  padding: 25px;
+  border: 1px solid #b27aff25;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #1a1429, #100e19);
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.event-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--purple);
+}
+
+.event-icon {
+  display: grid;
+  place-items: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 14px;
+  background: #a855f725;
+  color: var(--cyan);
+  font-size: 28px;
+  margin-bottom: 22px;
+}
+
+.category {
+  color: var(--pink);
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.event-card h3 {
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+.event-card > p:not(.category) {
+  color: #aaa2bd;
+  font-size: 13px;
+  line-height: 1.8;
+  min-height: 70px;
+  margin-bottom: 20px;
+}
+
+.event-card button {
+  border: 1px solid #a855f766;
+  background: #a855f718;
+  color: #e8cfff;
+  padding: 11px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.event-card button:hover {
+  background: #a855f744;
+}
+
+.about,
+.contact {
+  text-align: center;
+  padding: 75px 10%;
+  background: #110e1d;
+}
+
+.about > p:last-child,
+.contact > p {
+  max-width: 650px;
+  margin: 0 auto 25px;
+  color: #aaa2bd;
+  line-height: 1.9;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding: 28px 8%;
+  color: #9289a4;
+  font-size: 12px;
+  border-top: 1px solid #ffffff15;
+}
+
+footer h3 {
+  color: white;
+}
+
+@media (max-width: 750px) {
+  header {
+    padding: 20px 5%;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  nav {
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+
+  .hero {
+    padding: 75px 7%;
+  }
+
+  .events {
+    padding: 55px 6%;
+  }
+
+  .event-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .event-card > p:not(.category) {
+    min-height: auto;
+  }
+
+  footer {
+    padding: 25px 6%;
+  }
+}
